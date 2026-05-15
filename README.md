@@ -13,7 +13,7 @@
 ![License: TBD](https://img.shields.io/badge/license-TBD-lightgrey)
 ![Branch: development](https://img.shields.io/badge/branch-development-green)
 
-> **Status banner (2026-05-06, current):** Genesis + Hardening + **Brúarhönd v0.1** all complete. **446 non-Blender, non-VRoid-host pytest tests passing, 3 skipped, 42 Blender/VRoid deselected.** 10 ADRs accepted (D-001..D-010). Three full Mythic Engineering rituals closed in one evening. The forge is built, hardened, and now grew a hand long enough to reach across Tailscale into a VRoid Studio session on a different machine. The "Genesis Phase" badge above is preserved for historical record per the additive-only rule.
+> **Status banner (2026-05-06, current):** Genesis + Hardening + **Brúarhönd v0.1** all complete. **491 non-Blender, non-VRoid-host pytest tests passing, 3 skipped, 42 Blender/VRoid deselected.** 10 ADRs accepted (D-001..D-010). Three full Mythic Engineering rituals closed in one evening. The forge is built, hardened, and now grew a hand long enough to reach across Tailscale into a VRoid Studio session on a different machine. The "Genesis Phase" badge above is preserved for historical record per the additive-only rule.
 
 ---
 
@@ -228,7 +228,7 @@ For full operator setup including Tailscale ACL examples, see [`docs/features/br
 ```bash
 # Default: all tests except those requiring Blender or a live VRoid host
 pytest -m "not requires_blender and not requires_vroid_host"
-# → 446 passed, 3 skipped, 42 deselected (Blender/VRoid)
+# → 491 passed, 3 skipped, 42 deselected (Blender/VRoid)
 
 # Include Blender integration tests (requires Blender installed)
 pytest -m "not requires_vroid_host"
@@ -409,7 +409,7 @@ The full phase-by-phase progress tracker lives in [`TASK_seidr_smidja_genesis.md
 
 ## Current Status
 
-> **Update 2026-05-06 (Brúarhönd v0.1 close):** **Three full Mythic Engineering rituals completed in one evening — Genesis, Hardening, and Brúarhönd v0.1.** **446 non-Blender, non-VRoid-host pytest tests passing, 3 skipped, 42 Blender/VRoid deselected** (Genesis 159 → Hardening 286 → Brúarhönd 430 → Brúarhönd remediation 489). **Aggregate coverage 82%** on the forge subtree, **68%** on the new brunhand subtree. **10 ADRs accepted** (D-001..D-010). All 10 genesis findings + all 23 hardening findings + all 18 Brúarhönd audit findings closed (one Low residual H-V-001 deferred from hardening; B-013/B-014 documented as v0.2 candidates in the Brúarhönd interface amendment). See [`docs/DEVLOG.md`](docs/DEVLOG.md) for the full session log including the closing entry "Brúarhönd v0.1 Ritual Closed (Phase 7 — Scribe close)."
+> **Update 2026-05-06 (Brúarhönd v0.1 close):** **Three full Mythic Engineering rituals completed in one evening — Genesis, Hardening, and Brúarhönd v0.1.** **491 non-Blender, non-VRoid-host pytest tests passing, 3 skipped, 42 Blender/VRoid deselected** (Genesis 159 → Hardening 286 → Brúarhönd 430 → Brúarhönd remediation 489). **Aggregate coverage 82%** on the forge subtree, **68%** on the new brunhand subtree. **10 ADRs accepted** (D-001..D-010). All 10 genesis findings + all 23 hardening findings + all 18 Brúarhönd audit findings closed (one Low residual H-V-001 deferred from hardening; B-013/B-014 documented as v0.2 candidates in the Brúarhönd interface amendment). See [`docs/DEVLOG.md`](docs/DEVLOG.md) for the full session log including the closing entry "Brúarhönd v0.1 Ritual Closed (Phase 7 — Scribe close)."
 >
 > Open work for v0.1.x — none blocking; H-V-001 cleanup, real Blender-enabled CI smoke, real VRoid-host smoke, then a v0.1.0 tag. v0.2 candidates: Loom→VRoid translation layer, Annáll streaming replication, Tailscale dynamic discovery, layout-aware hotkey allow-list, inline-token-refusal flag, parallel Mode C.
 
@@ -483,7 +483,7 @@ Seiðr-Smiðja/
 │       └── skills/                    ← Hermes/OpenClaw/Claude Code skill manifests.
 │
 ├── data/                              ← Compliance rule YAML files, Hoard catalog.
-├── tests/                             ← Pytest suite. 446 non-Blender, non-VRoid-host tests passing (3 skipped, 42 Blender/VRoid deselected).
+├── tests/                             ← Pytest suite. 491 non-Blender, non-VRoid-host tests passing (3 skipped, 42 Blender/VRoid deselected).
 │   └── brunhand/                      ← 144 + 59 = 203 Brúarhönd-specific tests.
 ├── tools/                             ← bootstrap_hoard.py, verify_install.py, brunhand_daemon.py, verify_brunhand.py.
 ├── examples/                          ← Example spec files.
