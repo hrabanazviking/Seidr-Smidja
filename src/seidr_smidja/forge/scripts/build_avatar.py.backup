@@ -1036,13 +1036,13 @@ def _setup_vrm_humanoid(bpy, spec: dict, base_path: str) -> None:
     # ── Setup VRM 1.0 expressions for non-VRM bases ─────────────────────────
     _setup_vrm_expressions(bpy, vrm_ext, spec, base_path)
 
-    # ── Validate (fixup disabled due to potential hangs) ──────────────────────────────────────
-#     try:
-#         from io_scene_vrm.editor.vrm1.property_group import Vrm1HumanBonesPropertyGroup
-#         Vrm1HumanBonesPropertyGroup.fixup_human_bones(armature)
-#         logger.info("Human bones fixup completed")
-#     except (ImportError, AttributeError, Exception) as exc:
-#         logger.debug("Human bones fixup skipped (non-critical): %s", exc)
+    # ── Fixup and validate ──────────────────────────────────────────────────
+    try:
+        from io_scene_vrm.editor.vrm1.property_group import Vrm1HumanBonesPropertyGroup
+        Vrm1HumanBonesPropertyGroup.fixup_human_bones(armature)
+        logger.info("Human bones fixup completed")
+    except (ImportError, AttributeError, Exception) as exc:
+        logger.debug("Human bones fixup skipped (non-critical): %s", exc)
 
     # Validate that required bones are assigned
     try:
