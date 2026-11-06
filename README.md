@@ -9,7 +9,6 @@
 
 ![Status: Genesis Phase — Vertical Slice Not Yet Forged](https://img.shields.io/badge/status-genesis%20phase-darkred)
 ![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)
-![License: TBD](https://img.shields.io/badge/license-TBD-lightgrey)
 ![Branch: development](https://img.shields.io/badge/branch-development-green)
 
 > **Status banner (2026-05-06, current):** Genesis + Hardening + **Brúarhönd v0.1** all complete. **489 non-Blender, non-VRoid-host pytest tests passing.** 10 ADRs accepted (D-001..D-010). Three full Mythic Engineering rituals closed in one evening. The forge is built, hardened, and now grew a hand long enough to reach across Tailscale into a VRoid Studio session on a different machine. The "Genesis Phase" badge above is preserved for historical record per the additive-only rule.
